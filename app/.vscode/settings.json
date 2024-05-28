@@ -1,0 +1,22 @@
+{
+    "editor.formatOnSave": true,
+    "flake8.args": [
+        "--config=.flake8"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+    },
+    "isort.args": [
+        "--settings-file",
+        "setup.cfg"
+    ],
+    "mypy-type-checker.args": [
+        "--disallow-untyped-defs"
+    ],
+    "python.analysis.extraPaths": [
+        "/usr/local/lib/python3.12/site-packages"
+    ],
+}
