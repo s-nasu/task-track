@@ -19,4 +19,17 @@
     "python.analysis.extraPaths": [
         "/usr/local/lib/python3.12/site-packages"
     ],
+    "sqltools.connections": [
+        {
+            "name": "task-track",
+            "server": "db",
+            "driver": "MySQL",
+            "port": 3306,
+            "database": "task-track",
+            "username": "root",
+            "askForPassword": false,
+            "password": "rootpassword",
+            "connectionTimeout": 15
+        }
+    ],
 }
