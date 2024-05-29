@@ -75,7 +75,7 @@ def db_session(db_engine) -> Generator[Session, Any, None]:
 
 @pytest.fixture
 def auth_headers():
-    return {"Authorization": "expected_token"}  # noqa: E501
+    return {"Authorization": "expected_token"}
 
 
 @pytest.fixture(scope="function")

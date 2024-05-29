@@ -2,6 +2,7 @@ from factory import Faker, Iterator, SubFactory
 from factory.alchemy import SQLAlchemyModelFactory
 from faker import Faker as OriginalFaker
 
+from dependencies.database import session
 from models.todo import TaskStatus, Todo
 
 from .user import UserFactory
@@ -18,6 +19,7 @@ class TodoFactory(SQLAlchemyModelFactory):
     class Meta:
         model = Todo
         sqlalchemy_session_persistence = "commit"
+        sqlalchemy_session = session
 
     title = Faker("pystr", max_chars=40, locale="ja_JP")
     """

@@ -10,6 +10,7 @@ app = FastAPI(
     description="カンバンタスク管理アプリケーションは、タスクの管理とユーザーの管理を行うアプリケーションです。",
     version="1.0.0",
     terms_of_service="http://example.com/terms/",
+    summary="This is a Kanban task management application.",
     contact={
         "name": "デッドプール",
         "url": "http://x-force.example.com/contact/",
@@ -21,16 +22,16 @@ app = FastAPI(
     },
     openapi_tags=[
         {
-            "name": "todos",
-            "description": "**タスク管理**に関する操作。",
-        },
-        {
             "name": "users",
-            "description": "_ユーザー管理_に関する操作。*とても素敵*",
+            "description": "_ユーザー管理_に関する操作。",
             "externalDocs": {
                 "description": "ユーザー管理に関するドキュメント",
                 "url": "https://example.com/users",
             },
+        },
+        {
+            "name": "todos",
+            "description": "**タスク管理**に関する操作。",
         },
     ],
     dependencies=[Depends(verify_token)],
