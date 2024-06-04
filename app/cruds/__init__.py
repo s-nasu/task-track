@@ -20,6 +20,7 @@ class CRUD(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
 
     def create(self, obj_in: CreateSchemaType) -> ModelType:
         object = self.model.model_validate(obj_in)
+
         self.session.add(object)
         self.session.commit()
         self.session.refresh(object)
